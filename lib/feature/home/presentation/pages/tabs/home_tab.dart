@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies/core/enum/enum.dart';
 import 'package:movies/core/utils/app_colors.dart';
-import 'package:movies/feature/home/data/models/popular_model.dart';
 import 'package:movies/feature/home/presentation/bloc/home_bloc.dart';
 import 'package:movies/feature/home/presentation/pages/items/popular_item.dart';
 import 'package:movies/feature/home/presentation/pages/items/up_coming_item.dart';
@@ -38,11 +36,7 @@ class HomeTab extends StatelessWidget {
       },
 
       builder: (context, state) {
-        return ScreenUtilInit(
-          designSize: const Size(412, 892),
-          minTextAdapt: true,
-          splitScreenMode: true,
-          child: Scaffold(
+        return Scaffold(
             backgroundColor: Colors.black,
              body: Column(
               children: [
@@ -50,7 +44,7 @@ class HomeTab extends StatelessWidget {
                 state.popularModel != null
                     ? PopularItem(state.popularModel?.results ?? [])
                     : Center(child: CircularProgressIndicator()),
-                SizedBox(height: 20.h,),
+                SizedBox(height: 20,),
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                   color: AppColors.backGround,
@@ -61,7 +55,7 @@ class HomeTab extends StatelessWidget {
                     ? UpComingItem(state.upComingModel?.results ?? [])
                     : Center(child: CircularProgressIndicator()),
           ])),
-                SizedBox(height: 20.h,),
+                SizedBox(height: 20,),
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                   color: AppColors.backGround,
@@ -76,7 +70,6 @@ class HomeTab extends StatelessWidget {
           
               ],
                        ),
-          ),
         );
       },
     );
