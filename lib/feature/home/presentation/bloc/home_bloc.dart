@@ -4,8 +4,10 @@ import 'package:movies/core/enum/enum.dart';
 import 'package:movies/core/error/failures/failure.dart';
 import 'package:movies/feature/home/data/models/GetTopRated.dart';
 import 'package:movies/feature/home/data/models/SearchModel.dart';
+import 'package:movies/feature/home/data/models/movies_list.dart';
 import 'package:movies/feature/home/data/models/popular_model.dart';
 import 'package:movies/feature/home/data/models/up_coming_model.dart';
+import 'package:movies/feature/home/domain/usecase/get_movies_list_usecase.dart';
 import 'package:movies/feature/home/domain/usecase/get_search_usecase.dart';
 
 import '../../domain/usecase/get_Popular_usecase.dart';
@@ -23,6 +25,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   GetUpComingUseCase getUpComingUseCase;
   GetTopRatedUseCase getTopRatedUseCase;
   GetSearchUseCase getSearchUseCase;
+  GetMoviesListUseCase getMoviesListUseCase;
+
 
 
 
@@ -30,7 +34,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       {required this.getPopularUseCase,
         required this.getUpComingUseCase,
       required this.getTopRatedUseCase,
-        required this.getSearchUseCase
+        required this.getSearchUseCase,
+        required this.getMoviesListUseCase
       })
       : super(const HomeState()) {
     on<GetPopularEvent>((event, emit)async {
@@ -66,7 +71,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     });
     on<GetSearchEvent>((event, emit) async {
       emit(state.copyWith(getSearchStatus: RequestStatus.loading));
-      var result=await getSearchUseCase("");
+      var result=await getSearchUseCase.call(event.query);
       result.fold((l) {
         emit(state.copyWith(getSearchStatus:RequestStatus.failures,searchFailures: l));
       }, (r) {
@@ -74,5 +79,17 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
       });
     });
+    on<GetMoviesListEvent>((event, emit) async {
+      emit(state.copyWith(getMoviesListStatus: RequestStatus.loading));
+      var result=await getMoviesListUseCase.call();
+      result.fold((l) {
+        emit(state.copyWith(getMoviesListStatus:RequestStatus.failures,moviesFailures: l));
+      }, (r) {
+        emit(state.copyWith(getMoviesListStatus:RequestStatus.success,moviesListModel: r));
+
+      });
+    });
+
+
   }
 }

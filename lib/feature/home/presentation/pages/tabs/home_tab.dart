@@ -36,9 +36,7 @@ class HomeTab extends StatelessWidget {
       },
 
       builder: (context, state) {
-        return Scaffold(
-            backgroundColor: Colors.black,
-             body: Column(
+        return Column(
               children: [
           
                 state.popularModel != null
@@ -69,7 +67,7 @@ class HomeTab extends StatelessWidget {
                 )
           
               ],
-                       ),
+
         );
       },
     );
