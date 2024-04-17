@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/core/api/api_manager.dart';
 import 'package:movies/core/utils/app_string.dart';
+import 'package:movies/feature/home/data/data_source/remote/remote_home_ds.dart';
 import 'package:movies/feature/home/data/data_source/remote/remote_home_ds_impl.dart';
 import 'package:movies/feature/home/data/repository/home_repo_impl.dart';
 import 'package:movies/feature/home/domain/usecase/get_Popular_usecase.dart';
+import 'package:movies/feature/home/domain/usecase/get_search_usecase.dart';
 import 'package:movies/feature/home/domain/usecase/get_top_Rated_usecase.dart';
 import 'package:movies/feature/home/domain/usecase/get_up_coming_usecase.dart';
 import 'package:movies/feature/home/presentation/bloc/home_bloc.dart';
@@ -50,10 +52,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ApiManager(),
             ),
           ),
-        ),
+        ), getSearchUseCase: GetSearchUseCase(HomeRepoImpl(HomeDsImpl(ApiManager()))),
       )..add(GetPopularEvent())
         ..add(GetUpComingEvent())
         ..add(GetTopRatedEvent())
+      ..add(GetSearchEvent())
       ,
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
