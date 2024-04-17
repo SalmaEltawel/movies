@@ -12,7 +12,7 @@ class ApiManager {
     return dio.get(Constant.BASE_URL + endPoint,
         options: Options(headers: {
           "Authorization":
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTI3MDczY2M0MjY3YzllYjhlMDA2ZmZkMzZkNjg1YyIsInN1YiI6IjY2MDU4MjZmMTVkZWEwMDE2MjI3OTdmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sc4fMfCf7vQOvwNpKvu84Af41qhSM0coPjkOOBe-ujY"
+              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NjI2NGRkNzExNjA5Zjk3OWM4M2U0YmI2NGUzYzc3NSIsInN1YiI6IjY2MWRjYjRlYTM5ZDBiMDE2MzU0YmM4YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wUx57Amb_NF2O4hmqG2KFSz_8UKRsRWBH1z3OHeWnRM"
         }));
   }
 

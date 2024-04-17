@@ -39,44 +39,57 @@ class HomeTab extends StatelessWidget {
 
       builder: (context, state) {
         return ScreenUtilInit(
-          designSize: const Size(412, 892),
-          minTextAdapt: true,
-          splitScreenMode: true,
-          child: Scaffold(
-            backgroundColor: Colors.black,
-             body: Column(
-              children: [
-          
-                state.popularModel != null
-                    ? PopularItem(state.popularModel?.results ?? [])
-                    : Center(child: CircularProgressIndicator()),
-                SizedBox(height: 20.h,),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                  color: AppColors.backGround,
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                      Text(("New Releases"), style: TextStyle(color: AppColors.white)),
-                state.upComingModel != null
-                    ? UpComingItem(state.upComingModel?.results ?? [])
-                    : Center(child: CircularProgressIndicator()),
-          ])),
-                SizedBox(height: 20.h,),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                  color: AppColors.backGround,
-                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            builder: (context, widget) {
+              ScreenUtil.init(
+                  context, designSize: Size(412, 892), splitScreenMode: true,minTextAdapt: true,
+              );
+              return
+                Scaffold(
+                  backgroundColor: Colors.black,
+                  body: Column(
                     children: [
-                      Text(("Recommended"), style: TextStyle(color: AppColors.white)),
-                     state.topRatedModel != null
-                      ? TopRatedItem(state.topRatedModel?.results ?? [])
-                      : Center(child: CircularProgressIndicator()),],
-                )
-                )
-          
-              ],
-                       ),
-          ),
+
+                      state.popularModel != null
+                          ? PopularItem(state.popularModel?.results ?? [])
+                          : Center(child: CircularProgressIndicator()),
+                      SizedBox(height: 20.h,),
+                      Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 10),
+                          color: AppColors.backGround,
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(("New Releases"), style: TextStyle(
+                                    color: AppColors.white)),
+                                state.upComingModel != null
+                                    ? UpComingItem(state.upComingModel
+                                    ?.results ?? [])
+                                    : Center(
+                                    child: CircularProgressIndicator()),
+                              ])),
+                      SizedBox(height: 20.h,),
+                      Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20, horizontal: 10),
+                          color: AppColors.backGround,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(("Recommended"), style: TextStyle(
+                                  color: AppColors.white)),
+                              state.topRatedModel != null
+                                  ? TopRatedItem(state.topRatedModel?.results ??
+                                  [])
+                                  : Center(child: CircularProgressIndicator()),
+                            ],
+                          )
+                      )
+
+                    ],
+                  ),
+                );
+            },
         );
       },
     );
