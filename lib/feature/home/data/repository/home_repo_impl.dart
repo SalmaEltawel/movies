@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:movies/core/error/failures/failure.dart';
 import 'package:movies/feature/home/data/data_source/remote/remote_home_ds.dart';
 import 'package:movies/feature/home/data/models/GetTopRated.dart';
+import 'package:movies/feature/home/data/models/SearchModel.dart';
 import 'package:movies/feature/home/data/models/popular_model.dart';
 import 'package:movies/feature/home/data/models/up_coming_model.dart';
 import 'package:movies/feature/home/domain/repository/home_repo.dart';
@@ -39,5 +40,17 @@ class HomeRepoImpl implements HomeRepo {
     } catch (e) {
       return Left(RemoteFailure(e.toString()));
     }
+  }
+
+  @override
+  Future<Either<Failures, SearchModel>> getSearch(String quary) async{
+    try {
+      var result = await homeDs.getSearch(quary);
+      return Right(result);
+    }catch(e){
+      return Left(RemoteFailure(e.toString()));
+    }
+
+
   }
 }

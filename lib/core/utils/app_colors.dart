@@ -6,6 +6,9 @@ class AppColors{
   static Color floatingButtonBackGround=const Color(0xffFFFFFF) ;
   static Color white=const Color(0xffFFFFFF) ;
   static Color backGround=const Color(0xff282A28) ;
+  static Color black= Colors.black ;
+
+
 
 
 }
