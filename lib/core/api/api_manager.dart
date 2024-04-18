@@ -8,13 +8,10 @@ class ApiManager {
     dio = Dio();
   }
 
-  Future<Response> getData(String endPoint, {Map<String, dynamic>? param}) {
-    return dio.get(Constant.BASE_URL + endPoint,
-        options: Options(headers: {
-          "Authorization":
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZTI3MDczY2M0MjY3YzllYjhlMDA2ZmZkMzZkNjg1YyIsInN1YiI6IjY2MDU4MjZmMTVkZWEwMDE2MjI3OTdmNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sc4fMfCf7vQOvwNpKvu84Af41qhSM0coPjkOOBe-ujY"
-        }));
-  }
+  Future<Response> getData(String endPoint,) {
+    return dio.get(Constant.BASE_URL + endPoint,queryParameters: {"api_key":"46264dd711609f979c83e4bb64e3c775"});  }
+  Future<Response>getSearch(String endPoint,String quary) {
+    return dio.get(Constant.BASE_URL +endPoint,queryParameters: {"api_key":"46264dd711609f979c83e4bb64e3c775","quary":quary});  }
 
   Future<Response> postData(String endPoint, {Map<String, dynamic>? body}) {
     return dio.post(Constant.BASE_URL + endPoint, data: body);

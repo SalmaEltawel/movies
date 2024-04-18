@@ -1,6 +1,5 @@
 import 'package:movies/core/api/api_manager.dart';
 import 'package:movies/core/api/end_points.dart';
-import 'package:movies/core/utils/constants.dart';
 import 'package:movies/feature/home/data/data_source/remote/remote_home_ds.dart';
 import 'package:movies/feature/home/data/models/GetTopRated.dart';
 import 'package:movies/feature/home/data/models/SearchModel.dart';
