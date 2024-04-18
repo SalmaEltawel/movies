@@ -20,6 +20,7 @@ import 'package:movies/feature/home/presentation/pages/tabs/watchlist_tab.dart';
 import '../../../../core/utils/app_colors.dart';
 
 class HomeScreen extends StatefulWidget {
+  static const String routename="home";
   HomeScreen({super.key});
 
   @override
