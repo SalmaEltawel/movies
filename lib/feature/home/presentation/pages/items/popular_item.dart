@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:movies/core/utils/constants.dart';
 import 'package:movies/feature/home/data/models/popular_model.dart';
 
 import '../../../../../core/utils/app_colors.dart';
@@ -22,7 +23,7 @@ List<Results>result;
         children: [
           CarouselSlider(
               items: [
-                CachedNetworkImage(imageUrl:results?.backdropPath??"" )],
+                CachedNetworkImage(imageUrl:Constant.image_URL )],
               options: CarouselOptions(
                 height: 100,
                 aspectRatio: 16/9,
@@ -55,7 +56,7 @@ List<Results>result;
               Container(
                 alignment: Alignment.bottomLeft,
                 child: Image(
-                    image:  NetworkImage(results?.posterPath??"")),
+                    image:  NetworkImage(Constant.image_URL)),
               ),
             ],
           ),

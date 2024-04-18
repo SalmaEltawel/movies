@@ -25,24 +25,26 @@ class BrowseTab extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return Column(
-          children: [
-            SafeArea(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                Padding(
-                  padding: const EdgeInsets.all(18),
-                  child: Text("Browse Category ",
-                      style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.w400,
-                          color: AppColors.white)),
-                ),
-                GridViewItems()
-              ]),
-            ),
-          ],
+        return SingleChildScrollView(
+          child: Column(
+            children: [
+              SafeArea(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                  Padding(
+                    padding: const EdgeInsets.all(18),
+                    child: Text("Browse Category ",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.white)),
+                  ),
+                  GridViewItems()
+                ]),
+              ),
+            ],
+          ),
         );
       },
     );

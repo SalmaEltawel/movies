@@ -12,7 +12,7 @@ class ApiManager {
     String endPoint,{Map<String, dynamic>? param}
   ) {
     return dio.get(Constant.BASE_URL + endPoint,
-        queryParameters: {"api_key": "86bbcfb9738e4946b281231f8b349a37"});
+        queryParameters: {"api_key": "46264dd711609f979c83e4bb64e3c775"});
   }
 
   Future<Response> getSearch(String endPoint, {Map<String, dynamic>? param}) {
@@ -22,4 +22,5 @@ class ApiManager {
   Future<Response> postData(String endPoint, {Map<String, dynamic>? body}) {
     return dio.post(Constant.BASE_URL + endPoint, data: body);
   }
+
 }

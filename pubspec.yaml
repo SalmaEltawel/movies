@@ -44,6 +44,7 @@ dependencies:
   carousel_slider: ^4.2.1
   dio: ^5.4.3+1
   freezed: ^2.5.2
+  flutter_screenutil: ^5.9.0
 
 dev_dependencies:
   flutter_test:
