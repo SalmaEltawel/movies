@@ -4,8 +4,10 @@ import 'package:movies/core/api/api_manager.dart';
 import 'package:movies/core/utils/app_string.dart';
 import 'package:movies/feature/home/data/data_source/remote/remote_home_ds.dart';
 import 'package:movies/feature/home/data/data_source/remote/remote_home_ds_impl.dart';
+import 'package:movies/feature/home/data/models/SearchModel.dart';
 import 'package:movies/feature/home/data/repository/home_repo_impl.dart';
 import 'package:movies/feature/home/domain/usecase/get_Popular_usecase.dart';
+import 'package:movies/feature/home/domain/usecase/get_movies_list_usecase.dart';
 import 'package:movies/feature/home/domain/usecase/get_search_usecase.dart';
 import 'package:movies/feature/home/domain/usecase/get_top_Rated_usecase.dart';
 import 'package:movies/feature/home/domain/usecase/get_up_coming_usecase.dart';
@@ -26,12 +28,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
+  late SearchModel searchModel;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => HomeBloc(
-
         getPopularUseCase: GetPopularUseCase(
           HomeRepoImpl(
             HomeDsImpl(
@@ -52,13 +54,21 @@ class _HomeScreenState extends State<HomeScreen> {
               ApiManager(),
             ),
           ),
-        ), getSearchUseCase: GetSearchUseCase(HomeRepoImpl(HomeDsImpl(ApiManager()))),
-      )..add(GetPopularEvent())
+        ),
+        getSearchUseCase:
+            GetSearchUseCase(
+                HomeRepoImpl(
+                    HomeDsImpl(
+                        ApiManager()))),
+        getMoviesListUseCase: GetMoviesListUseCase(HomeRepoImpl(HomeDsImpl(ApiManager()))),
+      )
+        ..add(GetPopularEvent())
         ..add(GetUpComingEvent())
         ..add(GetTopRatedEvent())
-      ..add(GetSearchEvent())
+      ..add(GetMoviesListEvent())
       ,
       child: Scaffold(
+        backgroundColor: AppColors.black,
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: AppColors.backGroundBottomNavigationBar,
           type: BottomNavigationBarType.fixed,

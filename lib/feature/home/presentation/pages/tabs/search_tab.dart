@@ -19,6 +19,7 @@ class SearchTab extends StatelessWidget {
     SearchModel searchModel=SearchModel();
     return BlocConsumer<HomeBloc, HomeState>(
 
+
         listener: (context, state) {
           if (state.getSearchStatus == RequestStatus.loading) {
             showDialog(
@@ -62,7 +63,7 @@ class SearchTab extends StatelessWidget {
             height: 20,
           ),
           searchController != null
-              ? Expanded(
+              ? SizedBox(height: 100,
                 child: ListView.separated(
                     itemBuilder: (BuildContext context, int index) {
                       return Row(

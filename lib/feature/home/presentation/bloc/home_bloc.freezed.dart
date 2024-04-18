@@ -22,7 +22,8 @@ mixin _$HomeEvent {
     required TResult Function() getPopular,
     required TResult Function() getUpComing,
     required TResult Function() getTopRated,
-    required TResult Function() getSearch,
+    required TResult Function(String query) getSearch,
+    required TResult Function() getMoviesList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +32,8 @@ mixin _$HomeEvent {
     TResult? Function()? getPopular,
     TResult? Function()? getUpComing,
     TResult? Function()? getTopRated,
-    TResult? Function()? getSearch,
+    TResult? Function(String query)? getSearch,
+    TResult? Function()? getMoviesList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +42,8 @@ mixin _$HomeEvent {
     TResult Function()? getPopular,
     TResult Function()? getUpComing,
     TResult Function()? getTopRated,
-    TResult Function()? getSearch,
+    TResult Function(String query)? getSearch,
+    TResult Function()? getMoviesList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +54,7 @@ mixin _$HomeEvent {
     required TResult Function(GetUpComingEvent value) getUpComing,
     required TResult Function(GetTopRatedEvent value) getTopRated,
     required TResult Function(GetSearchEvent value) getSearch,
+    required TResult Function(GetMoviesListEvent value) getMoviesList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +64,7 @@ mixin _$HomeEvent {
     TResult? Function(GetUpComingEvent value)? getUpComing,
     TResult? Function(GetTopRatedEvent value)? getTopRated,
     TResult? Function(GetSearchEvent value)? getSearch,
+    TResult? Function(GetMoviesListEvent value)? getMoviesList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +74,7 @@ mixin _$HomeEvent {
     TResult Function(GetUpComingEvent value)? getUpComing,
     TResult Function(GetTopRatedEvent value)? getTopRated,
     TResult Function(GetSearchEvent value)? getSearch,
+    TResult Function(GetMoviesListEvent value)? getMoviesList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -133,7 +139,8 @@ class _$StartedImpl implements _Started {
     required TResult Function() getPopular,
     required TResult Function() getUpComing,
     required TResult Function() getTopRated,
-    required TResult Function() getSearch,
+    required TResult Function(String query) getSearch,
+    required TResult Function() getMoviesList,
   }) {
     return started();
   }
@@ -145,7 +152,8 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getPopular,
     TResult? Function()? getUpComing,
     TResult? Function()? getTopRated,
-    TResult? Function()? getSearch,
+    TResult? Function(String query)? getSearch,
+    TResult? Function()? getMoviesList,
   }) {
     return started?.call();
   }
@@ -157,7 +165,8 @@ class _$StartedImpl implements _Started {
     TResult Function()? getPopular,
     TResult Function()? getUpComing,
     TResult Function()? getTopRated,
-    TResult Function()? getSearch,
+    TResult Function(String query)? getSearch,
+    TResult Function()? getMoviesList,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -174,6 +183,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(GetUpComingEvent value) getUpComing,
     required TResult Function(GetTopRatedEvent value) getTopRated,
     required TResult Function(GetSearchEvent value) getSearch,
+    required TResult Function(GetMoviesListEvent value) getMoviesList,
   }) {
     return started(this);
   }
@@ -186,6 +196,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(GetUpComingEvent value)? getUpComing,
     TResult? Function(GetTopRatedEvent value)? getTopRated,
     TResult? Function(GetSearchEvent value)? getSearch,
+    TResult? Function(GetMoviesListEvent value)? getMoviesList,
   }) {
     return started?.call(this);
   }
@@ -198,6 +209,7 @@ class _$StartedImpl implements _Started {
     TResult Function(GetUpComingEvent value)? getUpComing,
     TResult Function(GetTopRatedEvent value)? getTopRated,
     TResult Function(GetSearchEvent value)? getSearch,
+    TResult Function(GetMoviesListEvent value)? getMoviesList,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -253,7 +265,8 @@ class _$GetPopularEventImpl implements GetPopularEvent {
     required TResult Function() getPopular,
     required TResult Function() getUpComing,
     required TResult Function() getTopRated,
-    required TResult Function() getSearch,
+    required TResult Function(String query) getSearch,
+    required TResult Function() getMoviesList,
   }) {
     return getPopular();
   }
@@ -265,7 +278,8 @@ class _$GetPopularEventImpl implements GetPopularEvent {
     TResult? Function()? getPopular,
     TResult? Function()? getUpComing,
     TResult? Function()? getTopRated,
-    TResult? Function()? getSearch,
+    TResult? Function(String query)? getSearch,
+    TResult? Function()? getMoviesList,
   }) {
     return getPopular?.call();
   }
@@ -277,7 +291,8 @@ class _$GetPopularEventImpl implements GetPopularEvent {
     TResult Function()? getPopular,
     TResult Function()? getUpComing,
     TResult Function()? getTopRated,
-    TResult Function()? getSearch,
+    TResult Function(String query)? getSearch,
+    TResult Function()? getMoviesList,
     required TResult orElse(),
   }) {
     if (getPopular != null) {
@@ -294,6 +309,7 @@ class _$GetPopularEventImpl implements GetPopularEvent {
     required TResult Function(GetUpComingEvent value) getUpComing,
     required TResult Function(GetTopRatedEvent value) getTopRated,
     required TResult Function(GetSearchEvent value) getSearch,
+    required TResult Function(GetMoviesListEvent value) getMoviesList,
   }) {
     return getPopular(this);
   }
@@ -306,6 +322,7 @@ class _$GetPopularEventImpl implements GetPopularEvent {
     TResult? Function(GetUpComingEvent value)? getUpComing,
     TResult? Function(GetTopRatedEvent value)? getTopRated,
     TResult? Function(GetSearchEvent value)? getSearch,
+    TResult? Function(GetMoviesListEvent value)? getMoviesList,
   }) {
     return getPopular?.call(this);
   }
@@ -318,6 +335,7 @@ class _$GetPopularEventImpl implements GetPopularEvent {
     TResult Function(GetUpComingEvent value)? getUpComing,
     TResult Function(GetTopRatedEvent value)? getTopRated,
     TResult Function(GetSearchEvent value)? getSearch,
+    TResult Function(GetMoviesListEvent value)? getMoviesList,
     required TResult orElse(),
   }) {
     if (getPopular != null) {
@@ -373,7 +391,8 @@ class _$GetUpComingEventImpl implements GetUpComingEvent {
     required TResult Function() getPopular,
     required TResult Function() getUpComing,
     required TResult Function() getTopRated,
-    required TResult Function() getSearch,
+    required TResult Function(String query) getSearch,
+    required TResult Function() getMoviesList,
   }) {
     return getUpComing();
   }
@@ -385,7 +404,8 @@ class _$GetUpComingEventImpl implements GetUpComingEvent {
     TResult? Function()? getPopular,
     TResult? Function()? getUpComing,
     TResult? Function()? getTopRated,
-    TResult? Function()? getSearch,
+    TResult? Function(String query)? getSearch,
+    TResult? Function()? getMoviesList,
   }) {
     return getUpComing?.call();
   }
@@ -397,7 +417,8 @@ class _$GetUpComingEventImpl implements GetUpComingEvent {
     TResult Function()? getPopular,
     TResult Function()? getUpComing,
     TResult Function()? getTopRated,
-    TResult Function()? getSearch,
+    TResult Function(String query)? getSearch,
+    TResult Function()? getMoviesList,
     required TResult orElse(),
   }) {
     if (getUpComing != null) {
@@ -414,6 +435,7 @@ class _$GetUpComingEventImpl implements GetUpComingEvent {
     required TResult Function(GetUpComingEvent value) getUpComing,
     required TResult Function(GetTopRatedEvent value) getTopRated,
     required TResult Function(GetSearchEvent value) getSearch,
+    required TResult Function(GetMoviesListEvent value) getMoviesList,
   }) {
     return getUpComing(this);
   }
@@ -426,6 +448,7 @@ class _$GetUpComingEventImpl implements GetUpComingEvent {
     TResult? Function(GetUpComingEvent value)? getUpComing,
     TResult? Function(GetTopRatedEvent value)? getTopRated,
     TResult? Function(GetSearchEvent value)? getSearch,
+    TResult? Function(GetMoviesListEvent value)? getMoviesList,
   }) {
     return getUpComing?.call(this);
   }
@@ -438,6 +461,7 @@ class _$GetUpComingEventImpl implements GetUpComingEvent {
     TResult Function(GetUpComingEvent value)? getUpComing,
     TResult Function(GetTopRatedEvent value)? getTopRated,
     TResult Function(GetSearchEvent value)? getSearch,
+    TResult Function(GetMoviesListEvent value)? getMoviesList,
     required TResult orElse(),
   }) {
     if (getUpComing != null) {
@@ -493,7 +517,8 @@ class _$GetTopRatedEventImpl implements GetTopRatedEvent {
     required TResult Function() getPopular,
     required TResult Function() getUpComing,
     required TResult Function() getTopRated,
-    required TResult Function() getSearch,
+    required TResult Function(String query) getSearch,
+    required TResult Function() getMoviesList,
   }) {
     return getTopRated();
   }
@@ -505,7 +530,8 @@ class _$GetTopRatedEventImpl implements GetTopRatedEvent {
     TResult? Function()? getPopular,
     TResult? Function()? getUpComing,
     TResult? Function()? getTopRated,
-    TResult? Function()? getSearch,
+    TResult? Function(String query)? getSearch,
+    TResult? Function()? getMoviesList,
   }) {
     return getTopRated?.call();
   }
@@ -517,7 +543,8 @@ class _$GetTopRatedEventImpl implements GetTopRatedEvent {
     TResult Function()? getPopular,
     TResult Function()? getUpComing,
     TResult Function()? getTopRated,
-    TResult Function()? getSearch,
+    TResult Function(String query)? getSearch,
+    TResult Function()? getMoviesList,
     required TResult orElse(),
   }) {
     if (getTopRated != null) {
@@ -534,6 +561,7 @@ class _$GetTopRatedEventImpl implements GetTopRatedEvent {
     required TResult Function(GetUpComingEvent value) getUpComing,
     required TResult Function(GetTopRatedEvent value) getTopRated,
     required TResult Function(GetSearchEvent value) getSearch,
+    required TResult Function(GetMoviesListEvent value) getMoviesList,
   }) {
     return getTopRated(this);
   }
@@ -546,6 +574,7 @@ class _$GetTopRatedEventImpl implements GetTopRatedEvent {
     TResult? Function(GetUpComingEvent value)? getUpComing,
     TResult? Function(GetTopRatedEvent value)? getTopRated,
     TResult? Function(GetSearchEvent value)? getSearch,
+    TResult? Function(GetMoviesListEvent value)? getMoviesList,
   }) {
     return getTopRated?.call(this);
   }
@@ -558,6 +587,7 @@ class _$GetTopRatedEventImpl implements GetTopRatedEvent {
     TResult Function(GetUpComingEvent value)? getUpComing,
     TResult Function(GetTopRatedEvent value)? getTopRated,
     TResult Function(GetSearchEvent value)? getSearch,
+    TResult Function(GetMoviesListEvent value)? getMoviesList,
     required TResult orElse(),
   }) {
     if (getTopRated != null) {
@@ -576,6 +606,8 @@ abstract class _$$GetSearchEventImplCopyWith<$Res> {
   factory _$$GetSearchEventImplCopyWith(_$GetSearchEventImpl value,
           $Res Function(_$GetSearchEventImpl) then) =
       __$$GetSearchEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String query});
 }
 
 /// @nodoc
@@ -585,26 +617,51 @@ class __$$GetSearchEventImplCopyWithImpl<$Res>
   __$$GetSearchEventImplCopyWithImpl(
       _$GetSearchEventImpl _value, $Res Function(_$GetSearchEventImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? query = null,
+  }) {
+    return _then(_$GetSearchEventImpl(
+      null == query
+          ? _value.query
+          : query // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$GetSearchEventImpl implements GetSearchEvent {
-  const _$GetSearchEventImpl();
+  const _$GetSearchEventImpl(this.query);
+
+  @override
+  final String query;
 
   @override
   String toString() {
-    return 'HomeEvent.getSearch()';
+    return 'HomeEvent.getSearch(query: $query)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetSearchEventImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$GetSearchEventImpl &&
+            (identical(other.query, query) || other.query == query));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetSearchEventImplCopyWith<_$GetSearchEventImpl> get copyWith =>
+      __$$GetSearchEventImplCopyWithImpl<_$GetSearchEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -613,9 +670,10 @@ class _$GetSearchEventImpl implements GetSearchEvent {
     required TResult Function() getPopular,
     required TResult Function() getUpComing,
     required TResult Function() getTopRated,
-    required TResult Function() getSearch,
+    required TResult Function(String query) getSearch,
+    required TResult Function() getMoviesList,
   }) {
-    return getSearch();
+    return getSearch(query);
   }
 
   @override
@@ -625,9 +683,10 @@ class _$GetSearchEventImpl implements GetSearchEvent {
     TResult? Function()? getPopular,
     TResult? Function()? getUpComing,
     TResult? Function()? getTopRated,
-    TResult? Function()? getSearch,
+    TResult? Function(String query)? getSearch,
+    TResult? Function()? getMoviesList,
   }) {
-    return getSearch?.call();
+    return getSearch?.call(query);
   }
 
   @override
@@ -637,11 +696,12 @@ class _$GetSearchEventImpl implements GetSearchEvent {
     TResult Function()? getPopular,
     TResult Function()? getUpComing,
     TResult Function()? getTopRated,
-    TResult Function()? getSearch,
+    TResult Function(String query)? getSearch,
+    TResult Function()? getMoviesList,
     required TResult orElse(),
   }) {
     if (getSearch != null) {
-      return getSearch();
+      return getSearch(query);
     }
     return orElse();
   }
@@ -654,6 +714,7 @@ class _$GetSearchEventImpl implements GetSearchEvent {
     required TResult Function(GetUpComingEvent value) getUpComing,
     required TResult Function(GetTopRatedEvent value) getTopRated,
     required TResult Function(GetSearchEvent value) getSearch,
+    required TResult Function(GetMoviesListEvent value) getMoviesList,
   }) {
     return getSearch(this);
   }
@@ -666,6 +727,7 @@ class _$GetSearchEventImpl implements GetSearchEvent {
     TResult? Function(GetUpComingEvent value)? getUpComing,
     TResult? Function(GetTopRatedEvent value)? getTopRated,
     TResult? Function(GetSearchEvent value)? getSearch,
+    TResult? Function(GetMoviesListEvent value)? getMoviesList,
   }) {
     return getSearch?.call(this);
   }
@@ -678,6 +740,7 @@ class _$GetSearchEventImpl implements GetSearchEvent {
     TResult Function(GetUpComingEvent value)? getUpComing,
     TResult Function(GetTopRatedEvent value)? getTopRated,
     TResult Function(GetSearchEvent value)? getSearch,
+    TResult Function(GetMoviesListEvent value)? getMoviesList,
     required TResult orElse(),
   }) {
     if (getSearch != null) {
@@ -688,7 +751,138 @@ class _$GetSearchEventImpl implements GetSearchEvent {
 }
 
 abstract class GetSearchEvent implements HomeEvent {
-  const factory GetSearchEvent() = _$GetSearchEventImpl;
+  const factory GetSearchEvent(final String query) = _$GetSearchEventImpl;
+
+  String get query;
+  @JsonKey(ignore: true)
+  _$$GetSearchEventImplCopyWith<_$GetSearchEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetMoviesListEventImplCopyWith<$Res> {
+  factory _$$GetMoviesListEventImplCopyWith(_$GetMoviesListEventImpl value,
+          $Res Function(_$GetMoviesListEventImpl) then) =
+      __$$GetMoviesListEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetMoviesListEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetMoviesListEventImpl>
+    implements _$$GetMoviesListEventImplCopyWith<$Res> {
+  __$$GetMoviesListEventImplCopyWithImpl(_$GetMoviesListEventImpl _value,
+      $Res Function(_$GetMoviesListEventImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetMoviesListEventImpl implements GetMoviesListEvent {
+  const _$GetMoviesListEventImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getMoviesList()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetMoviesListEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getPopular,
+    required TResult Function() getUpComing,
+    required TResult Function() getTopRated,
+    required TResult Function(String query) getSearch,
+    required TResult Function() getMoviesList,
+  }) {
+    return getMoviesList();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getPopular,
+    TResult? Function()? getUpComing,
+    TResult? Function()? getTopRated,
+    TResult? Function(String query)? getSearch,
+    TResult? Function()? getMoviesList,
+  }) {
+    return getMoviesList?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getPopular,
+    TResult Function()? getUpComing,
+    TResult Function()? getTopRated,
+    TResult Function(String query)? getSearch,
+    TResult Function()? getMoviesList,
+    required TResult orElse(),
+  }) {
+    if (getMoviesList != null) {
+      return getMoviesList();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetPopularEvent value) getPopular,
+    required TResult Function(GetUpComingEvent value) getUpComing,
+    required TResult Function(GetTopRatedEvent value) getTopRated,
+    required TResult Function(GetSearchEvent value) getSearch,
+    required TResult Function(GetMoviesListEvent value) getMoviesList,
+  }) {
+    return getMoviesList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetPopularEvent value)? getPopular,
+    TResult? Function(GetUpComingEvent value)? getUpComing,
+    TResult? Function(GetTopRatedEvent value)? getTopRated,
+    TResult? Function(GetSearchEvent value)? getSearch,
+    TResult? Function(GetMoviesListEvent value)? getMoviesList,
+  }) {
+    return getMoviesList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetPopularEvent value)? getPopular,
+    TResult Function(GetUpComingEvent value)? getUpComing,
+    TResult Function(GetTopRatedEvent value)? getTopRated,
+    TResult Function(GetSearchEvent value)? getSearch,
+    TResult Function(GetMoviesListEvent value)? getMoviesList,
+    required TResult orElse(),
+  }) {
+    if (getMoviesList != null) {
+      return getMoviesList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetMoviesListEvent implements HomeEvent {
+  const factory GetMoviesListEvent() = _$GetMoviesListEventImpl;
 }
 
 /// @nodoc
@@ -697,14 +891,17 @@ mixin _$HomeState {
   RequestStatus get getTopRatedStatus => throw _privateConstructorUsedError;
   RequestStatus get getUpComingStatus => throw _privateConstructorUsedError;
   RequestStatus get getSearchStatus => throw _privateConstructorUsedError;
+  RequestStatus get getMoviesListStatus => throw _privateConstructorUsedError;
   PopularModel? get popularModel => throw _privateConstructorUsedError;
   TopRatedModel? get topRatedModel => throw _privateConstructorUsedError;
   UpComingModel? get upComingModel => throw _privateConstructorUsedError;
   SearchModel? get searchModel => throw _privateConstructorUsedError;
+  MoviesListModel? get moviesListModel => throw _privateConstructorUsedError;
   Failures? get popularFailures => throw _privateConstructorUsedError;
   Failures? get topRatedFailures => throw _privateConstructorUsedError;
   Failures? get upComingFailures => throw _privateConstructorUsedError;
   Failures? get searchFailures => throw _privateConstructorUsedError;
+  Failures? get moviesFailures => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -721,14 +918,17 @@ abstract class $HomeStateCopyWith<$Res> {
       RequestStatus getTopRatedStatus,
       RequestStatus getUpComingStatus,
       RequestStatus getSearchStatus,
+      RequestStatus getMoviesListStatus,
       PopularModel? popularModel,
       TopRatedModel? topRatedModel,
       UpComingModel? upComingModel,
       SearchModel? searchModel,
+      MoviesListModel? moviesListModel,
       Failures? popularFailures,
       Failures? topRatedFailures,
       Failures? upComingFailures,
-      Failures? searchFailures});
+      Failures? searchFailures,
+      Failures? moviesFailures});
 }
 
 /// @nodoc
@@ -748,14 +948,17 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? getTopRatedStatus = null,
     Object? getUpComingStatus = null,
     Object? getSearchStatus = null,
+    Object? getMoviesListStatus = null,
     Object? popularModel = freezed,
     Object? topRatedModel = freezed,
     Object? upComingModel = freezed,
     Object? searchModel = freezed,
+    Object? moviesListModel = freezed,
     Object? popularFailures = freezed,
     Object? topRatedFailures = freezed,
     Object? upComingFailures = freezed,
     Object? searchFailures = freezed,
+    Object? moviesFailures = freezed,
   }) {
     return _then(_value.copyWith(
       getPopularStatus: null == getPopularStatus
@@ -774,6 +977,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.getSearchStatus
           : getSearchStatus // ignore: cast_nullable_to_non_nullable
               as RequestStatus,
+      getMoviesListStatus: null == getMoviesListStatus
+          ? _value.getMoviesListStatus
+          : getMoviesListStatus // ignore: cast_nullable_to_non_nullable
+              as RequestStatus,
       popularModel: freezed == popularModel
           ? _value.popularModel
           : popularModel // ignore: cast_nullable_to_non_nullable
@@ -790,6 +997,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.searchModel
           : searchModel // ignore: cast_nullable_to_non_nullable
               as SearchModel?,
+      moviesListModel: freezed == moviesListModel
+          ? _value.moviesListModel
+          : moviesListModel // ignore: cast_nullable_to_non_nullable
+              as MoviesListModel?,
       popularFailures: freezed == popularFailures
           ? _value.popularFailures
           : popularFailures // ignore: cast_nullable_to_non_nullable
@@ -805,6 +1016,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
       searchFailures: freezed == searchFailures
           ? _value.searchFailures
           : searchFailures // ignore: cast_nullable_to_non_nullable
+              as Failures?,
+      moviesFailures: freezed == moviesFailures
+          ? _value.moviesFailures
+          : moviesFailures // ignore: cast_nullable_to_non_nullable
               as Failures?,
     ) as $Val);
   }
@@ -823,14 +1038,17 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       RequestStatus getTopRatedStatus,
       RequestStatus getUpComingStatus,
       RequestStatus getSearchStatus,
+      RequestStatus getMoviesListStatus,
       PopularModel? popularModel,
       TopRatedModel? topRatedModel,
       UpComingModel? upComingModel,
       SearchModel? searchModel,
+      MoviesListModel? moviesListModel,
       Failures? popularFailures,
       Failures? topRatedFailures,
       Failures? upComingFailures,
-      Failures? searchFailures});
+      Failures? searchFailures,
+      Failures? moviesFailures});
 }
 
 /// @nodoc
@@ -848,14 +1066,17 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? getTopRatedStatus = null,
     Object? getUpComingStatus = null,
     Object? getSearchStatus = null,
+    Object? getMoviesListStatus = null,
     Object? popularModel = freezed,
     Object? topRatedModel = freezed,
     Object? upComingModel = freezed,
     Object? searchModel = freezed,
+    Object? moviesListModel = freezed,
     Object? popularFailures = freezed,
     Object? topRatedFailures = freezed,
     Object? upComingFailures = freezed,
     Object? searchFailures = freezed,
+    Object? moviesFailures = freezed,
   }) {
     return _then(_$HomeStateImpl(
       getPopularStatus: null == getPopularStatus
@@ -874,6 +1095,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.getSearchStatus
           : getSearchStatus // ignore: cast_nullable_to_non_nullable
               as RequestStatus,
+      getMoviesListStatus: null == getMoviesListStatus
+          ? _value.getMoviesListStatus
+          : getMoviesListStatus // ignore: cast_nullable_to_non_nullable
+              as RequestStatus,
       popularModel: freezed == popularModel
           ? _value.popularModel
           : popularModel // ignore: cast_nullable_to_non_nullable
@@ -890,6 +1115,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.searchModel
           : searchModel // ignore: cast_nullable_to_non_nullable
               as SearchModel?,
+      moviesListModel: freezed == moviesListModel
+          ? _value.moviesListModel
+          : moviesListModel // ignore: cast_nullable_to_non_nullable
+              as MoviesListModel?,
       popularFailures: freezed == popularFailures
           ? _value.popularFailures
           : popularFailures // ignore: cast_nullable_to_non_nullable
@@ -906,6 +1135,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.searchFailures
           : searchFailures // ignore: cast_nullable_to_non_nullable
               as Failures?,
+      moviesFailures: freezed == moviesFailures
+          ? _value.moviesFailures
+          : moviesFailures // ignore: cast_nullable_to_non_nullable
+              as Failures?,
     ));
   }
 }
@@ -918,14 +1151,17 @@ class _$HomeStateImpl implements _HomeState {
       this.getTopRatedStatus = RequestStatus.init,
       this.getUpComingStatus = RequestStatus.init,
       this.getSearchStatus = RequestStatus.init,
+      this.getMoviesListStatus = RequestStatus.init,
       this.popularModel,
       this.topRatedModel,
       this.upComingModel,
       this.searchModel,
+      this.moviesListModel,
       this.popularFailures,
       this.topRatedFailures,
       this.upComingFailures,
-      this.searchFailures});
+      this.searchFailures,
+      this.moviesFailures});
 
   @override
   @JsonKey()
@@ -940,6 +1176,9 @@ class _$HomeStateImpl implements _HomeState {
   @JsonKey()
   final RequestStatus getSearchStatus;
   @override
+  @JsonKey()
+  final RequestStatus getMoviesListStatus;
+  @override
   final PopularModel? popularModel;
   @override
   final TopRatedModel? topRatedModel;
@@ -948,6 +1187,8 @@ class _$HomeStateImpl implements _HomeState {
   @override
   final SearchModel? searchModel;
   @override
+  final MoviesListModel? moviesListModel;
+  @override
   final Failures? popularFailures;
   @override
   final Failures? topRatedFailures;
@@ -955,10 +1196,12 @@ class _$HomeStateImpl implements _HomeState {
   final Failures? upComingFailures;
   @override
   final Failures? searchFailures;
+  @override
+  final Failures? moviesFailures;
 
   @override
   String toString() {
-    return 'HomeState(getPopularStatus: $getPopularStatus, getTopRatedStatus: $getTopRatedStatus, getUpComingStatus: $getUpComingStatus, getSearchStatus: $getSearchStatus, popularModel: $popularModel, topRatedModel: $topRatedModel, upComingModel: $upComingModel, searchModel: $searchModel, popularFailures: $popularFailures, topRatedFailures: $topRatedFailures, upComingFailures: $upComingFailures, searchFailures: $searchFailures)';
+    return 'HomeState(getPopularStatus: $getPopularStatus, getTopRatedStatus: $getTopRatedStatus, getUpComingStatus: $getUpComingStatus, getSearchStatus: $getSearchStatus, getMoviesListStatus: $getMoviesListStatus, popularModel: $popularModel, topRatedModel: $topRatedModel, upComingModel: $upComingModel, searchModel: $searchModel, moviesListModel: $moviesListModel, popularFailures: $popularFailures, topRatedFailures: $topRatedFailures, upComingFailures: $upComingFailures, searchFailures: $searchFailures, moviesFailures: $moviesFailures)';
   }
 
   @override
@@ -974,6 +1217,8 @@ class _$HomeStateImpl implements _HomeState {
                 other.getUpComingStatus == getUpComingStatus) &&
             (identical(other.getSearchStatus, getSearchStatus) ||
                 other.getSearchStatus == getSearchStatus) &&
+            (identical(other.getMoviesListStatus, getMoviesListStatus) ||
+                other.getMoviesListStatus == getMoviesListStatus) &&
             (identical(other.popularModel, popularModel) ||
                 other.popularModel == popularModel) &&
             (identical(other.topRatedModel, topRatedModel) ||
@@ -982,6 +1227,8 @@ class _$HomeStateImpl implements _HomeState {
                 other.upComingModel == upComingModel) &&
             (identical(other.searchModel, searchModel) ||
                 other.searchModel == searchModel) &&
+            (identical(other.moviesListModel, moviesListModel) ||
+                other.moviesListModel == moviesListModel) &&
             (identical(other.popularFailures, popularFailures) ||
                 other.popularFailures == popularFailures) &&
             (identical(other.topRatedFailures, topRatedFailures) ||
@@ -989,7 +1236,9 @@ class _$HomeStateImpl implements _HomeState {
             (identical(other.upComingFailures, upComingFailures) ||
                 other.upComingFailures == upComingFailures) &&
             (identical(other.searchFailures, searchFailures) ||
-                other.searchFailures == searchFailures));
+                other.searchFailures == searchFailures) &&
+            (identical(other.moviesFailures, moviesFailures) ||
+                other.moviesFailures == moviesFailures));
   }
 
   @override
@@ -999,14 +1248,17 @@ class _$HomeStateImpl implements _HomeState {
       getTopRatedStatus,
       getUpComingStatus,
       getSearchStatus,
+      getMoviesListStatus,
       popularModel,
       topRatedModel,
       upComingModel,
       searchModel,
+      moviesListModel,
       popularFailures,
       topRatedFailures,
       upComingFailures,
-      searchFailures);
+      searchFailures,
+      moviesFailures);
 
   @JsonKey(ignore: true)
   @override
@@ -1021,14 +1273,17 @@ abstract class _HomeState implements HomeState {
       final RequestStatus getTopRatedStatus,
       final RequestStatus getUpComingStatus,
       final RequestStatus getSearchStatus,
+      final RequestStatus getMoviesListStatus,
       final PopularModel? popularModel,
       final TopRatedModel? topRatedModel,
       final UpComingModel? upComingModel,
       final SearchModel? searchModel,
+      final MoviesListModel? moviesListModel,
       final Failures? popularFailures,
       final Failures? topRatedFailures,
       final Failures? upComingFailures,
-      final Failures? searchFailures}) = _$HomeStateImpl;
+      final Failures? searchFailures,
+      final Failures? moviesFailures}) = _$HomeStateImpl;
 
   @override
   RequestStatus get getPopularStatus;
@@ -1039,6 +1294,8 @@ abstract class _HomeState implements HomeState {
   @override
   RequestStatus get getSearchStatus;
   @override
+  RequestStatus get getMoviesListStatus;
+  @override
   PopularModel? get popularModel;
   @override
   TopRatedModel? get topRatedModel;
@@ -1047,6 +1304,8 @@ abstract class _HomeState implements HomeState {
   @override
   SearchModel? get searchModel;
   @override
+  MoviesListModel? get moviesListModel;
+  @override
   Failures? get popularFailures;
   @override
   Failures? get topRatedFailures;
@@ -1054,6 +1313,8 @@ abstract class _HomeState implements HomeState {
   Failures? get upComingFailures;
   @override
   Failures? get searchFailures;
+  @override
+  Failures? get moviesFailures;
   @override
   @JsonKey(ignore: true)
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>

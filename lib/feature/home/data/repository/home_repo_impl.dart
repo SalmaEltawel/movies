@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:movies/core/error/failures/failure.dart';
 import 'package:movies/feature/home/data/data_source/remote/remote_home_ds.dart';
+import 'package:movies/feature/home/data/models/movies_list.dart';
 import 'package:movies/feature/home/data/models/GetTopRated.dart';
 import 'package:movies/feature/home/data/models/SearchModel.dart';
 import 'package:movies/feature/home/data/models/popular_model.dart';
@@ -53,4 +54,15 @@ class HomeRepoImpl implements HomeRepo {
 
 
   }
+
+  @override
+  Future<Either<Failures, MoviesListModel>> getMoviesList() async{
+    try{
+      var result=await homeDs.getMoviesList();
+      return Right(result);
+    }catch(e){
+      return Left(RemoteFailure(e.toString()));
+    }
+  }
+
 }
